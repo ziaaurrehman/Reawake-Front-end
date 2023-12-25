@@ -30,7 +30,7 @@ a:hover {
   justify-content: space-around;
 }
 .hero_flex{
-  background-image: url(/public/images/Vector\ 2.svg);
+  background-image: url(/public/images/heroimg.svg);
 }
 .Signup_flex{
   display: flex;
