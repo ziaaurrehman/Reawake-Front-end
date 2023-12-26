@@ -30,7 +30,44 @@ a:hover {
   justify-content: space-around;
 }
 .hero_flex{
-  background-image: url(/public/images/heroimg.svg);
+  background-image: url(/public/images/Vector\ 21.svg);
+  align-items: center;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+}
+.content_9{
+  font-family: exo-bold;
+  font-size: 60px;
+  color: #010033;
+}
+.p_1{
+font-size: 20px;
+text-align: center;
+width: 68%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 30px;
+margin-bottom: 30px;
+font-family: exo-md;
+}
+.wel_div{
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.wel_img{
+  width: 60%;
+  height: 450px;
+
+}
+.h_1{
+  color: #000;
+  text-align: center;
+  font-size: 28px;
+  font-family: exo-bold;
+}
+.content_9_span{
+  color: #fff;
 }
 .Signup_flex{
   display: flex;
@@ -200,11 +237,11 @@ font-size: 17px;
 }
 .get_btn:hover {
   border: 2px solid #00B3EC;
-  animation: slidebg 2s linear infinite;
   background: none;
   color: #00B3EC;
   font-family: exo-reg;
   transition: all 0.45s;
+  animation: slidebg 2s linear infinite;
 }
 .crd_title{
   font-family: exo-bold;
@@ -243,6 +280,73 @@ padding-right: 20px;
   text-align: justify;
   padding-left: 20px;
   padding-bottom: 20px;
+}
+.h2_1{
+  font-family: exo-bold;
+  font-size: 44px;
+}
+.flex_cardss{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.why_card{
+  width: 317px;
+  margin-right: 20px;
+  margin-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 25px;
+  height: 310px;
+  background-color: #EFFAFF;
+  border: 1px solid #00ACFF;
+  border-radius: 5px;
+}
+.why_card:hover{
+  transition: all 0.45s;
+  animation: slidebg 2s linear infinite;
+height: 320px;
+margin-top: 30px;
+}
+.btn_w{
+  width: 180px;
+  background-color: #010033;
+
+}
+.get_start_div{
+margin-top: 30px;
+}
+.btn_w:hover{
+  background-color: #ffc229 !important;
+  border: none !important;
+  color: #fff;
+  transition: all 0.45s;
+  animation: slidebg 2s linear infinite;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 222222222;
+  margin-top: 36px;
+  margin-left: -36px;
+}
+.h2_3{
+  font-size: 14px;
+  font-family: exo-md;
+}
+.h2_2{
+  font-size: 18px;
+  font-family: exo-md;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.why_card img {
+  padding-bottom: 20px;
+}
+.why_me{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .heading_pricing2{
   font-size: 40px;
@@ -314,8 +418,34 @@ width: 100%;
   .signup_img{
     display: none;
   }
+  .hero_flex {
+    flex-direction: column;
+  }
   .login_flex{
     padding-right: 0;
+  }
+  .hero_img img {
+    height: 340px;
+  }
+  .wel_div {
+margin-top: 40px;
+  }
+  .h_1{
+    font-size: 20px;
+  }
+  .p_1{
+width: 72%;
+font-size: 12.2px;
+margin-top: 10px;
+  }
+  .wel_img{
+height: fit-content;
+width: 80%;
+
+  }
+  .content_9{
+    padding-top: 40px;
+    font-size: 30px;
   }
   .fields_flex{
     padding-left: 50px;
@@ -324,6 +454,13 @@ width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
+  .why_card{
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .flex_cardss{
+    flex-direction: column;
+    }
   .fields_flex_mbl{
     padding-left:0 ;
     flex-direction: column;
