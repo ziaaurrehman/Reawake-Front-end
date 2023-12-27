@@ -131,7 +131,7 @@ const Review = () => {
 const CustomLeftArrow = ({ onClick }) => {
     return (
       <div onClick={onClick} className="customArrowLeft pointer">
-        <img className="dddd" src="/images/left-arrow.png" alt="Left"></img>
+        <img className="dddd" src="/images/right-arrow.png" alt="Left"></img>
       </div>
     );
   };
@@ -139,7 +139,7 @@ const CustomLeftArrow = ({ onClick }) => {
   const CustomRightArrow = ({ onClick }) => {
     return (
       <div onClick={onClick} className="customArrowRight pointer">
-        <img className="dddd" src="/images/right-arrow.png" alt="right"></img>
+        <img className="dddd" src="/images/left-arrow (2).png" alt="right"></img>
       </div>
     );
   };

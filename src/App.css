@@ -33,6 +33,9 @@ a:hover {
 .hero_img img {
   height: 480px;
 }
+.dddd{
+  height: 30px;
+}
 .hero_flex{
 background-color: #00ACFF;
   align-items: center;
@@ -570,6 +573,31 @@ width: 80%;
   .item_fields_2 {
 flex-direction: column;
 }
+.h2_1{
+  font-size: 27px;
+}
+.orignal_card {
+  width: 100%;
+}
+.review_flex{
+flex-direction: column;
+}
+.customArrowRight{
+right: 0;
+}
+.customArrowLeft{
+left: 0;
+}
+.p_4{
+  width: 68%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card_bg{
+padding: 15px;
+margin-right: 0;
+}
+
 .cpad{
   display: none;
 }
