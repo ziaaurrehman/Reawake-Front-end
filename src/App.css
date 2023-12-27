@@ -480,6 +480,9 @@ height: 21px;
 .item_fields_2{
   display: flex;
 }
+.team{
+  padding-bottom: 70px;
+}
 .signup_btn{
   color: #fff;
   background-color: #00B3EC;
@@ -489,6 +492,11 @@ height: 21px;
  font-family: exo-reg;
  border: none;
  margin-top: 30px;
+}
+.footer_p:hover{
+  margin-top: 1px;
+  cursor: pointer;
+  color: #00ACFF;
 }
 .crd1:hover{
 color: #00B3EC;
@@ -527,7 +535,7 @@ width: 100%;
     padding-right: 0;
   }
   .hero_img img {
-    height: 340px;
+    height: 310px;
   }
   .wel_div {
 margin-top: 40px;
@@ -578,6 +586,11 @@ flex-direction: column;
 }
 .orignal_card {
   width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.text_start{
+  text-align: left !important;
 }
 .review_flex{
 flex-direction: column;
@@ -596,8 +609,11 @@ left: 0;
 .card_bg{
 padding: 15px;
 margin-right: 0;
+height: 400px;
 }
-
+.card_title2{
+padding-top: 30px;
+}
 .cpad{
   display: none;
 }
