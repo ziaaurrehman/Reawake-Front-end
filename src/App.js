@@ -7,6 +7,7 @@ import Setting from './Pages/Setting';
 import Pricing from './Pages/Pricing';
 import Forgot from './Pages/Forgot';
 import NewPassword from './Pages/NewPassword';
+import DocPage from './Pages/DocPage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path='/pricing' element={<Pricing/>}/>
             <Route path='/forgot' element={<Forgot/>}/>
             <Route path='/new-password' element={<NewPassword/>}/>
+            <Route path='/doc' element={<DocPage/>}/>
         {/* </Route> */}
       </Routes>
     

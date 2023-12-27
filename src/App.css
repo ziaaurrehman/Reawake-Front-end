@@ -179,6 +179,7 @@ font-size: 17px;
   font-size: 14px;
   font-weight: 700;
 }
+
 .statebtn1 {
   width: 130px;
   color: #fff;
@@ -189,6 +190,64 @@ font-size: 17px;
   border: none;
   font-size: 14px;
   font-weight: 700;
+}
+.active {
+  border-bottom: 2px solid #6D6D6D;
+  cursor: pointer;
+  padding-bottom: 10PX;
+  padding-right: 20PX;
+}
+.active2{
+  border: none;
+  padding-right: 20PX;
+  background-color: transparent;
+  padding-bottom: 10PX;
+  cursor: pointer;
+}
+.card_dash{
+  padding-top: 30px;
+  width: 340px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30px;
+  height: 400px;
+  
+}
+.fisrt_f{
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 20px;
+}
+.main_f{
+  border: 1.3px solid #e1d6d6;
+  height: 270px;
+  border-radius: 10px;
+}
+.card_flex_dash{
+  display: flex;
+  justify-content: space-between;
+}
+.child_nxt{
+  display: flex;
+  padding-top: 20px;
+
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.date_btnn{
+  background-color:#b8e8fe;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+}
+.d_img{
+  width: 302px;
+  padding-left: 20px;
+    padding-right: 30px;
 }
 .radio_section{
   background-color: #F0F0F0;
@@ -557,10 +616,53 @@ color: #00B3EC;
   font-family: exo-reg;
   transition: all 0.45s;
 }
+.doc_Page{
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .login_with{
 width: 100%;
 }
+.setting{
+  height: 25px;
+}
+.cale{
+  height: 25px;
+}
+.doc_header{
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+padding-top: 30px;
+padding-bottom: 70px;
+}
+.dash_title{
+  display: flex;
+}
+.flex_icons{
+  display: flex;
+}
+.header_child_1{
+  display: flex;
+}
+.header_child_2{
+display: flex;
+align-items: center;
+}
+.fff{
+  align-items: center;
+}
+.title_Doc{
+  font-family: exo-reg;
+  font-size: 14px;
+}
+.user_name{
+  font-family: exo-reg;
+  font-size: 14px;
+  font-weight: 600;
+}
 .btn{
+
   width: 100%;
   padding-left: 0;
   padding-right: 0;
