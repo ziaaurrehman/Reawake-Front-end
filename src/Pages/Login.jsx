@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -24,7 +25,7 @@ const Login = () => {
                 <div className='mbl_v' style={{fontFamily:"exo-reg",fontSize:"11px",paddingTop:"10px"}}>Forgot Password</div>
                 <div className='btn'><button className='signup_btn'>Login</button></div>
                 <div className='forgot_title'>Don’t have any account yet?</div>
-                <div className='btn'><button className='signup_btn mt-2'>Sign up</button></div>
+                <Link to="/register"><div className='btn'><button className='signup_btn mt-2'>Sign up</button></div></Link>
                 </div>
                 
         </div>

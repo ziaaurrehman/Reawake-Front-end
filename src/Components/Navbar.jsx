@@ -8,23 +8,27 @@ const Navbar = ({ moveToDiv }) => {
     <>
       <div className="main_nav">
         <div className="Navbar">
-           <img className="" src="/images/awake.svg" alt="" />     
+          <Link to="/"><img className="" src="/images/awake.svg" alt="" /></Link> 
           <div className={`nav-items ${isOpen && "open"}`}>
+            <Link to="/">
             <button
               className="nav_items"
             >
               Home
             </button>
+            </Link>
             <button
               className="nav_items"
             >
               Features
             </button>
+            <Link to="/pricing">
             <button
               className="nav_items"
             >
              Pricing
             </button>
+            </Link>
             <button
               className="nav_items "
             >

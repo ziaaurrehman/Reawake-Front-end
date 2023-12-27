@@ -30,9 +30,10 @@ a:hover {
   justify-content: space-around;
 }
 .hero_flex{
-  background-image: url(/public/images/Vector\ 21.svg);
+background-color: #00ACFF;
   align-items: center;
   justify-content: space-between;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .content_9{
@@ -235,6 +236,22 @@ font-size: 17px;
   color: #fff;
   font-family: exo-reg;
 }
+.client_section{
+  display: flex;
+  padding-top:35px ;
+}
+.client_name{
+  font-family: exo-bold;
+  font-family: 13px;
+}
+.bio_data{
+  font-family: exo-md;
+  font-size: 12px;
+}
+.client_bio{
+  text-align: left;
+  padding-left: 15px;
+}
 .get_btn:hover {
   border: 2px solid #00B3EC;
   background: none;
@@ -281,9 +298,71 @@ padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
+.card_title2{
+  font-size: 12px;
+  
+text-align: start;
+  font-family: exo-md;
+}
+.card_title1{
+  font-size: 16px;
+  padding-left: 10px;
+font-weight: 600;
+  font-family: exo-md;
+}
+.third_f{
+  display: flex;
+  padding-bottom: 20px;
+}
+.orignal_card{
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-left: auto;
+    margin-right: auto;
+  padding-right: 20px;
+  background-color: #fff;
+}
+.card_bg{
+  background-color: #EFFAFF;
+  display: flex;
+ padding: 40px;
+ margin-right: 15px;
+ margin-top: 40px;
+
+}
+.team_card{
+  border-radius: 12px !important;
+  background-color: #fff !important;
+  border: 1px solid #d1caca !important;
+}
+.p_4{
+  font-size: 12px;
+  font-family: exo-reg;
+  color: #6D6D6D;
+}
+.review_section {
+  padding-left: 30px;
+  padding-bottom: 70px;
+  padding-right: 30px;
+}
+.text_left{
+  text-align: left;
+}
+
 .h2_1{
   font-family: exo-bold;
   font-size: 44px;
+}
+.review_section{
+  text-align: center;
+}
+.review_flex{
+  display: flex;
+ align-items: baseline;
+  justify-content: space-between;
+
 }
 .flex_cardss{
   text-align: center;
@@ -307,6 +386,14 @@ padding-right: 20px;
   animation: slidebg 2s linear infinite;
 height: 320px;
 margin-top: 30px;
+}
+.team_card:hover{
+  transition: all 0.45s;
+  animation: slidebg 2s linear infinite;
+  border-top: 1.4px solid #00ACFF !important;
+  border-right:2px solid #00ACFF !important;
+  height: 310px !important;
+  margin-top: 50px !important;
 }
 .btn_w{
   width: 180px;
@@ -352,6 +439,14 @@ margin-top: 30px;
   font-size: 40px;
   font-family: exo-bold;
   color: #fff;
+}
+.customArrowLeft {
+  position: absolute;
+  left: 35px;
+}
+.customArrowRight {
+  position: absolute;
+  right: 50px;
 }
 .fields_flex{
   display: flex;

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 const Whyme = () => {
   return (
     <>
@@ -25,10 +25,13 @@ const Whyme = () => {
                 </div>
             </div>
         </div>
+        <Link to="/login">
         <div className='get_start_div'>
 <button className='get_btn btn_w'>Get Started</button>
 <img className='arrow' src='/images/icon1.svg' alt=''/>
         </div>
+        </Link>
+      
       </div>
       </>
   
