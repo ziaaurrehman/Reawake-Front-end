@@ -5,7 +5,7 @@ const Signup = () => {
     <div style={{background:"#FBFCFF",height:"100vh"}}>
         <img className='ab_img' src='/images/Circle (1).svg' alt=''/>
         <div className='Signup_flex'>
-            <div><img className='signup_img' src='/images/signup.svg' alt=''/></div>
+            <div><img className='signup_img' src='/images/sign_up.png' alt=''/></div>
             <div className='content_part'>
                 <h4 className='text-center'>Signup</h4>
                 <div className='fields_flex'>
