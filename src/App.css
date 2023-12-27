@@ -493,6 +493,54 @@ height: 21px;
  border: none;
  margin-top: 30px;
 }
+.forget_password {
+  border-top: 2.5px solid #00ACFF;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgb(0 0 0 / 58%);
+  padding-top: 40px;
+  padding-bottom: 60px;
+  margin-top: 100px;
+}
+.signup_inputs {
+  width: 60%;
+  background-color: rgba(237, 237, 237, 1);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 37px;
+  padding-left: 16px;
+}
+.loginbtn {
+  width: 20% !important;
+  background: #00ACFF;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  height: 38px;
+  font-size: 14px;
+  font-family: exo-reg;
+  margin-top: 20px;
+  outline: none;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.loginbtn:hover {
+  background-color: transparent;
+  color: #00ACFF;
+  border: 2px solid #00ACFF;
+  transition: all 0.45s;
+}
+.signup_inputs::placeholder {
+  font-size: 13px;
+  font-family: exo-reg;
+  color: rgba(128, 128, 128, 1);
+}
 .footer_p:hover{
   margin-top: 1px;
   cursor: pointer;
@@ -516,6 +564,10 @@ width: 100%;
   width: 100%;
   padding-left: 0;
   padding-right: 0;
+}
+.reset_p{
+  font-family: exo-reg;
+  font-size: 12px;
 }
 .btn_setting{
   width: 20%;
@@ -606,6 +658,15 @@ left: 0;
     margin-left: auto;
     margin-right: auto;
 }
+.forget_password {
+  width: 86%;
+  margin-top: 170px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.signup_inputs{
+  width: 78%;
+}
 .card_bg{
 padding: 15px;
 margin-right: 0;
@@ -617,6 +678,9 @@ padding-top: 30px;
 .cpad{
   display: none;
 }
+.loginbtn{
+  width: 43% !important;
+}
 .mbl_v{
   text-align: center;
   padding-top: 0 !important;
@@ -624,6 +688,7 @@ padding-top: 30px;
 .content_part{
   width: 100%;
 }
+
 .ab_img {
 height: 125px;
 }

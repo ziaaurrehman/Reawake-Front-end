@@ -22,7 +22,7 @@ const Login = () => {
   <input className='input_cls login_with' type="text" id="fname" name="fname"/></div>
             </div>
                 </div>
-                <div className='mbl_v' style={{fontFamily:"exo-reg",fontSize:"11px",paddingTop:"10px"}}>Forgot Password</div>
+                <Link to="/forgot"><div className='mbl_v' style={{fontFamily:"exo-reg",fontSize:"11px",paddingTop:"10px"}}>Forgot Password</div></Link>
                 <div className='btn'><button className='signup_btn'>Login</button></div>
                 <div className='forgot_title'>Don’t have any account yet?</div>
                 <Link to="/register"><div className='btn'><button className='signup_btn mt-2'>Sign up</button></div></Link>
