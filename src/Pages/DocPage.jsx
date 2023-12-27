@@ -231,12 +231,12 @@ const DocPage = () => {
                     <div className="d-flex">
                     <div className="">
                         <img src="/images/mssg.svg" alt=""/>
-                        <div>4</div>
+                        <div>1</div>
                     </div>
                        
                     <div>
                         <img src="/images/attech.svg" alt=""/>
-                        <div>2</div>
+                        <div>5</div>
                     </div>
                     </div>
                 </div>
@@ -269,12 +269,12 @@ const DocPage = () => {
                     <div className="d-flex">
                     <div className="">
                         <img src="/images/mssg.svg" alt=""/>
-                        <div>4</div>
+                        <div>5</div>
                     </div>
                        
                     <div>
                         <img src="/images/attech.svg" alt=""/>
-                        <div>2</div>
+                        <div>12</div>
                     </div>
                     </div>
                 </div>
