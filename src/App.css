@@ -144,6 +144,10 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h4 {
   font-family: exo-bold;
@@ -165,6 +169,7 @@ h4 {
   font-family: exo-reg;
   font-size: 17px;
 }
+
 .statebtn {
   width: 130px;
   color: #fff;
@@ -680,6 +685,13 @@ label {
   .hero_flex {
     flex-direction: column;
   }
+  .board-container {
+    display: block !important;
+  }
+  .board {
+    width: 100% !important;
+    margin: 16px 0px !important;
+  }
   .card_flex_dash {
     grid-template-columns: repeat(
       2,
@@ -1132,12 +1144,17 @@ hr {
 /* add new task  */
 .dropdown {
   position: relative;
-  /* display: inline-block; */
 }
 .dropdown > button {
   background: transparent;
   outline: none;
   border: none;
+  margin-top: 0px;
+  color: #1c1d22;
+  font-size: 15.72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 15.72px */
 }
 .dropdown-content {
   display: none;
@@ -1149,4 +1166,140 @@ hr {
   display: block;
   position: absolute;
   left: -300%;
+}
+
+/* Modal styling */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  /* background-color: #fff; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.modal-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+} */
+
+.modal-close {
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+  border: none;
+  background: none;
+}
+
+/* Make modal responsive */
+@media screen and (max-width: 600px) {
+  .modal {
+    width: 90%;
+  }
+}
+
+/* Style overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Style for the container */
+.image-container {
+  position: relative;
+  width: 90px;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 360px;
+  /* border: 1px solid #000; */
+}
+
+/* Style for the image */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/* kanban */
+
+.board-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Board.css */
+.board {
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 33%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.card-container {
+  min-height: 100px;
+  margin-top: 8px;
+}
+
+button {
+  margin-top: 8px;
+}
+
+/* Card.css */
+.card {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card.dragging {
+  background-color: #e6f7ff;
+}
+.board::-webkit-scrollbar {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  column-gap: 5px;
+  justify-content: space-between;
 }

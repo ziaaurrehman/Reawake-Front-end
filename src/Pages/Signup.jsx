@@ -1,6 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
+import { signupUser } from "../Api";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const [data, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    phoneNumber: "",
+  });
+
+  const navigation = useNavigate();
+
+  const handleSignUp = async (values) => {
+    if (values.password === values.confirmPassword) {
+      try {
+        const res = await signupUser(values);
+        if (res?.status) {
+          toast.success("Sign up successful", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+          navigation("/login");
+        }
+      } catch (error) {
+        toast.error(`${error?.response?.data.message}`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        navigation("/register");
+      }
+    } else {
+      toast.error("Password and confirm Password should match!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
   return (
     <div style={{ background: "#FBFCFF", height: "100vh" }}>
       <img className="ab_img" src="/images/Circle (1).svg" alt="" />
@@ -13,45 +70,55 @@ const Signup = () => {
           <div className="fields_flex">
             <div className="item_fields pr_4">
               <div className="pb-4 pr_4">
-                <label for="fname">First name</label>
+                <label for="firstName">First name</label>
                 <br></br>
                 <input
                   className="input_cls"
                   type="text"
-                  id="fname"
-                  name="fname"
+                  id="firstName"
+                  name="firstName"
+                  onChange={(e) =>
+                    setData({ ...data, firstName: e.target.value })
+                  }
                 />
               </div>
               <div className="pb_4">
-                <label for="lname">Last name:</label>
+                <label for="lastName">Last name:</label>
                 <br></br>
                 <input
                   className="input_cls"
                   type="text"
-                  id="lname"
-                  name="lname"
+                  id="lastName"
+                  name="lastName"
+                  onChange={(e) =>
+                    setData({ ...data, lastName: e.target.value })
+                  }
                 />
               </div>
             </div>
 
             <div>
               <div className="pb-4">
-                <label for="fname">Email</label>
+                <label for="email">Email</label>
                 <br></br>
                 <input
                   className="input_cls"
-                  type="text"
-                  id="fname"
-                  name="fname"
+                  type="email"
+                  id="email"
+                  name="email"
+                  onChange={(e) => setData({ ...data, email: e.target.value })}
                 />
               </div>
-              <label for="lname">Phone No</label>
+              <label for="phoneNumber">Phone No</label>
               <br></br>
               <input
                 className="input_cls"
                 type="text"
-                id="lname"
-                name="lname"
+                id="phoneNumber"
+                name="phoneNumber"
+                onChange={(e) =>
+                  setData({ ...data, phoneNumber: e.target.value })
+                }
               />
             </div>
           </div>
@@ -59,29 +126,37 @@ const Signup = () => {
           <div className="fields_flex pt-0">
             <div className="item_fields_2 pr-4">
               <div className="pr-4 pb_4">
-                <label for="fname">Password</label>
+                <label for="password">Password</label>
                 <br></br>
                 <input
                   className="input_cls"
-                  type="text"
-                  id="fname"
-                  name="fname"
+                  type="password"
+                  id="password"
+                  name="password"
+                  onChange={(e) =>
+                    setData({ ...data, password: e.target.value })
+                  }
                 />
               </div>
               <div className="pb_4 cpad">
-                <label for="lname">Confirm Password</label>
+                <label for="confirmPassword">Confirm Password</label>
                 <br></br>
                 <input
                   className="input_cls"
-                  type="text"
-                  id="lname"
-                  name="lname"
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  onChange={(e) =>
+                    setData({ ...data, confirmPassword: e.target.value })
+                  }
                 />
               </div>
             </div>
           </div>
           <div className="btn">
-            <button className="signup_btn">Signup</button>
+            <button onClick={() => handleSignUp(data)} className="signup_btn">
+              Signup
+            </button>
           </div>
         </div>
       </div>
