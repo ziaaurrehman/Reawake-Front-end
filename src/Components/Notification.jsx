@@ -1,0 +1,88 @@
+import React, { useEffect, useState } from "react";
+import { deleteTaskNotification, getNotification } from "../Api";
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+
+export default function Notification() {
+  const [notification, setNotification] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    getAllNotification();
+    // eslint-disable-next-line
+  }, []);
+
+  const getAllNotification = async () => {
+    try {
+      const res = await getNotification(id);
+      if (res?.data?.success) {
+        setNotification(res?.data?.data);
+      }
+    } catch (error) {
+      toast.error(`${error?.response?.data.message}`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
+  console.log(notification);
+  const handleDelteNotification = async (id) => {
+    try {
+      await deleteTaskNotification(id);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  function formatDate(inputDate) {
+    const parts = inputDate.split("-");
+    // Rearrange the date parts to the desired format
+    const formattedDate = `${parts[1]}/${parts[2]}/${parts[0]}`;
+    return formattedDate;
+  }
+
+  function formatFullDate(fullDateString) {
+    const onlyDate = fullDateString.split("T")[0];
+    const value = formatDate(onlyDate);
+    return value;
+  }
+  return (
+    <div className="notification-section">
+      <h1>Notifications</h1>
+      {notification?.map((obj, _) => (
+        <div key={obj._id}>
+          {obj.notification.message ? (
+            <div key={obj._id} className="notification-container">
+              <div className="delete_notification">
+                <button
+                  onClick={() => {
+                    handleDelteNotification(obj._id);
+                  }}
+                >
+                  X
+                </button>
+              </div>
+              <div className="notification">
+                <span>{obj.notification.message}</span>
+              </div>
+              <div style={{ width: "100%" }}>
+                <div className="reminder">
+                  Reminder: <span>{formatDate(obj.reminder.date)}</span>
+                </div>
+                <div className="createdAt">
+                  <p>{formatFullDate(obj.createdAt)}</p>
+                </div>
+              </div>
+            </div>
+          ) : null}
+        </div>
+      ))}
+    </div>
+  );
+}

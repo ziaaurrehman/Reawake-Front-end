@@ -21,7 +21,7 @@ function Kanban() {
     getAllInProgressTasks();
     getAllTodoTasks();
     // eslint-disable-next-line
-  }, [todo, inProgress, completed]);
+  }, []);
   const { id } = useParams();
 
   const getAllTodoTasks = async () => {

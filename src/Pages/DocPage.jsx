@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Modal from "../Components/Modal";
-import { getTask } from "../Api";
+import { getNewNotification, getTask, updateTaskNotification } from "../Api";
 import { toast } from "react-toastify";
 import { useUserContext } from "../context";
 import { Link, useParams } from "react-router-dom";
 import Kanban from "../Components/Kanban/Kanban";
+
+import bellIcon from ".././assests/bellIcon.svg";
 const DocPage = () => {
   const [toggleState, setToggleState] = useState(1);
   const [isModalOpen, setModalOpen] = useState(false);
   const [data, setData] = useState([]);
+  const [notification, setNotification] = useState([]);
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -19,6 +22,10 @@ const DocPage = () => {
     getUser();
     // eslint-disable-next-line
   }, []);
+  useEffect(() => {
+    getAllNotification();
+    // eslint-disable-next-line
+  }, [notification]);
   const getUser = () => {
     const data = localStorage.getItem("user");
     if (data) {
@@ -80,6 +87,33 @@ const DocPage = () => {
     return `${day} ${monthName} ${year}`;
   }
 
+  const getAllNotification = async () => {
+    try {
+      const res = await getNewNotification(id);
+      if (res?.data?.success) {
+        setNotification(res?.data?.data);
+      }
+    } catch (error) {
+      toast.error(`${error?.response?.data.message}`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
+
+  const handleNotificationUpdate = async () => {
+    try {
+      await updateTaskNotification(id);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <div className="doc_Page">
@@ -91,6 +125,27 @@ const DocPage = () => {
 
           <div className="header_child_2">
             <div className="d-flex pr-2 fff">
+              <div
+                onClick={() => {
+                  handleNotificationUpdate();
+                }}
+                className="bell_icon"
+              >
+                <div className="bell">
+                  <Link to={`/notifications/${id}`}>
+                    <img
+                      className="setting pr-2"
+                      src={bellIcon}
+                      alt="bell-icon"
+                    />
+                  </Link>
+                </div>
+                {notification?.length === 0 ? null : (
+                  <div className="notification_number">
+                    {notification?.length}
+                  </div>
+                )}
+              </div>
               <div>
                 <Link to={`/setting/${id}`}>
                   <img
@@ -100,7 +155,7 @@ const DocPage = () => {
                   />
                 </Link>
               </div>
-              <img className="cale " src="/images/calender.svg" alt="" />
+              {/* <img className="cale " src="/images/calender.svg" alt="" /> */}
               <div className="title_Doc pl-3">{getCurrentDateFormatted()}</div>
               <div className="image-container">
                 {/* <img className="pl-3" src="/images/Profile.svg" alt="" /> */}

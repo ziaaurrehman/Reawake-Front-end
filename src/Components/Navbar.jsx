@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import "../Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Navbar = ({ user }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    // instance.logoutRedirect();
+    navigate("/login");
+  };
   return (
     <>
       <div className="main_nav">
@@ -19,7 +26,24 @@ const Navbar = ({ user }) => {
               <button className="nav_items">Pricing</button>
             </Link>
             <button className="nav_items ">Blogs</button>
-            {user ? null : (
+            {user ? (
+              <div className="buttons">
+                <div className="btn_start desktop_none">
+                  <button
+                    onClick={() => handleLogout()}
+                    className="registerbtn"
+                  >
+                    Log out
+                  </button>
+                </div>
+
+                <Link to={`/doc/${user?.userId}`}>
+                  <div className="btn_start desktop_none">
+                    <button className="registerbtn">Your tasks</button>
+                  </div>
+                </Link>
+              </div>
+            ) : (
               <div className="buttons">
                 <Link to="/login">
                   <div className="btn_start desktop_none">
@@ -34,7 +58,21 @@ const Navbar = ({ user }) => {
               </div>
             )}
           </div>
-          {user ? null : (
+          {user ? (
+            <div className="buttons">
+              <div className="btn_start mbl_none">
+                <button onClick={() => handleLogout()} className="registerbtn">
+                  Log out
+                </button>
+              </div>
+
+              <Link to={`/doc/${user?.userId}`}>
+                <div className="btn_start mbl_none">
+                  <button className="registerbtn">Your tasks</button>
+                </div>
+              </Link>
+            </div>
+          ) : (
             <div className="buttons">
               <Link to="/login">
                 <div className="btn_start mbl_none">

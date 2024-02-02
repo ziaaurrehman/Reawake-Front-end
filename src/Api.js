@@ -113,16 +113,6 @@ export const getTodoTask = async (id) => {
     const res = await axios.get(`/get-todo-task/${id}`);
     return res;
   } catch (error) {
-    // toast.error(`${error?.response?.data?.message}`, {
-    //   position: "top-right",
-    //   autoClose: 5000,
-    //   hideProgressBar: false,
-    //   closeOnClick: true,
-    //   pauseOnHover: true,
-    //   draggable: true,
-    //   progress: undefined,
-    //   theme: "light",
-    // });
     return error;
   }
 };
@@ -242,6 +232,52 @@ export const forgetPassword = async (email) => {
       progress: undefined,
       theme: "light",
     });
+    return error;
+  }
+};
+
+export const getNotification = async (id) => {
+  try {
+    const res = await axios.get(`/notification/${id}`);
+    return res;
+  } catch (error) {
+    return error;
+  }
+};
+
+export const getNewNotification = async (id) => {
+  try {
+    const res = await axios.get(`/new-notification/${id}`);
+    return res;
+  } catch (error) {
+    return error;
+  }
+};
+
+export const updateTaskNotification = async (id) => {
+  try {
+    const res = await axios.put(`/update-notification/${id}`);
+    return res;
+  } catch (error) {
+    // toast.error(`${error?.response?.data?.message}`, {
+    //   position: "top-right",
+    //   autoClose: 5000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   progress: undefined,
+    //   theme: "light",
+    // });
+    return error;
+  }
+};
+
+export const deleteTaskNotification = async (id) => {
+  try {
+    const res = await axios.put(`/delete-notification/${id}`);
+    return res;
+  } catch (error) {
     return error;
   }
 };

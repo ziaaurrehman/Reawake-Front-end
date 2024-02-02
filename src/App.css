@@ -1303,3 +1303,96 @@ button {
   column-gap: 5px;
   justify-content: space-between;
 }
+.bell_icon {
+  position: relative;
+  /* border: 1px solid #000; */
+  height: 40px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+.bell {
+  position: absolute;
+}
+.notification_number {
+  background-color: red;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 360px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: -5%;
+  color: white;
+  font-size: 12px;
+}
+.notification-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  flex-direction: column;
+}
+.notification-section > h1 {
+  font-size: 30px;
+}
+.notification-container {
+  width: 300px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.notification {
+  width: 100%;
+  color: #fff;
+  padding: 0px 15px;
+  /* margin-bottom: 10px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.delete_notification {
+  width: 100%;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0px 5px;
+}
+.delete_notification > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 0%;
+  color: white;
+  font-size: 12px;
+}
+.reminder {
+  width: auto;
+  padding: 0px 15px;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.createdAt {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 5px;
+}
+.createdAt > p {
+  font-size: 10px;
+  color: white;
+}

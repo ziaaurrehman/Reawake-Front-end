@@ -95,7 +95,7 @@ const AddNewTask = ({ setModalOpen }) => {
         >
           <option value="">Select</option>
           <option value="In Progress">In Progress</option>
-          <option value="To do">To do</option>
+          <option value="Todo">To do</option>
           <option value="Completed">Completed</option>
         </select>
       </div>
