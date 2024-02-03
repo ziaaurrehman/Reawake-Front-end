@@ -1386,13 +1386,13 @@ button {
   justify-content: flex-start;
   align-items: center;
 }
-.createdAt {
+.created_at {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   padding: 0px 5px;
 }
-.createdAt > p {
+.created_at > p {
   font-size: 10px;
   color: white;
 }

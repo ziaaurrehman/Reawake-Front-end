@@ -32,7 +32,7 @@ export default function Notification() {
     }
   };
   console.log(notification);
-  const handleDelteNotification = async (id) => {
+  const handleDelteNotifications = async (id) => {
     try {
       await deleteTaskNotification(id);
     } catch (error) {
@@ -62,7 +62,7 @@ export default function Notification() {
               <div className="delete_notification">
                 <button
                   onClick={() => {
-                    handleDelteNotification(obj._id);
+                    handleDelteNotifications(obj._id);
                   }}
                 >
                   X
@@ -75,7 +75,7 @@ export default function Notification() {
                 <div className="reminder">
                   Reminder: <span>{formatDate(obj.reminder.date)}</span>
                 </div>
-                <div className="createdAt">
+                <div className="created_at">
                   <p>{formatFullDate(obj.createdAt)}</p>
                 </div>
               </div>

@@ -3,12 +3,12 @@ import "../Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 const Navbar = ({ user }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
+  const navigation = useNavigate();
 
-  const handleLogout = () => {
+  const handleLogoutButton = () => {
     localStorage.removeItem("user");
     // instance.logoutRedirect();
-    navigate("/login");
+    navigation("/login");
   };
   return (
     <>
@@ -30,7 +30,7 @@ const Navbar = ({ user }) => {
               <div className="buttons">
                 <div className="btn_start desktop_none">
                   <button
-                    onClick={() => handleLogout()}
+                    onClick={() => handleLogoutButton()}
                     className="registerbtn"
                   >
                     Log out
